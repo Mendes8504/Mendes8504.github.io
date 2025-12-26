@@ -1,0 +1,290 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family:Arial, Helvetica, sans-serif;
+   text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #222831;
+    color:#EEEEEE;
+}
+
+#menu{
+    background-color: #222831;
+    box-shadow:0px 3px 5px black;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    font-size: 1.5rem;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    font-weight: 700;
+    z-index: 1000;
+}
+
+#menu nav a{
+    font-size: 1.0rem;
+    margin: 20px;
+    font-weight: 500;
+    color: #EEEEEE;
+}
+
+#menu nav a:hover{
+    color: rgb(75, 137, 196);
+    transition: 0.4s;
+}
+
+/* seção Home */
+.home{
+    padding-top: 50px;
+    font-weight: 700;
+    display: flex;
+    
+    align-items: center;
+}
+
+.home div {
+    margin: 60px;
+}
+
+.textohome1{
+    font-size: 4.0rem;
+    text-shadow: 5px 5px 10px black;
+    font-weight: 800;
+}
+
+.textohome3{
+    font-size: 4.0rem;
+    color: rgb(75, 137, 196);
+    font-weight: 800;
+    text-shadow: 5px 5px 10px black;
+}
+
+.textohome2{
+    margin-top: 10px;
+}
+
+
+img{
+    width: 350px;
+    border-radius: 50%;
+    box-shadow: 7px 10px 15px black;
+    border: 2px solid rgb(75, 137, 196);
+}
+
+.btn{
+    background-color: rgb(34, 63, 90);
+    width: 15%;
+    padding: 20px;
+    border-radius: 5%;
+    transition: 0.3s;
+    text-align: center;
+    box-shadow: 5px 5px 10px black;
+    
+}
+
+.btn a{
+    color: #EEEEEE;
+    font-weight: 600;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+/*Section Sobre*/
+#sobre{
+    background-color: #393E46;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-radius: 20px;
+    margin: 100px;
+}
+
+#sobre h1{
+    font-size: 2.5rem;
+    color: rgb(75, 137, 196);
+    font-weight: 800;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+
+.containersobre{
+    display: flex; 
+}
+
+.containersobre h2{
+    color: rgb(75, 137, 196);
+    text-shadow: 5px 5px 5px black;
+    font-weight: 800;
+}
+
+.containersobre div{
+    margin: 60px;
+}
+
+/*Seção Projetos */
+#projeto{
+    text-align: center;
+    margin-top: 150px;
+}
+
+#projeto h1{
+    color: rgb(75, 137, 196);
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-shadow: 5px 10px 10px black;
+}
+
+.containerprojetos {
+    display: flex;
+    flex-direction: column; /* deixa em coluna */
+    align-items: center;    /* centraliza horizontalmente */
+    gap: 50px;              /* espaço entre os projetos */
+    margin-top: 60px;
+}
+
+.projetos{
+    width: 80%;        /* largura controlada */
+    max-width: 900px;  /* não fica gigante em telas grandes */
+    background-color: #393E46;
+    padding: 50px;
+    text-align: start;
+    border-radius: 20px;
+}
+
+.containerprojetos h2{
+   color: rgb(75, 137, 196);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-shadow: 5px 5px 5px black;
+}
+
+.btnprojeto{
+    background-color: black;
+    padding: 12px;
+    width: 25%;
+    margin-top: 2%;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px black;
+    transition: 0.3s;
+}
+
+.btnprojeto a{
+    color: #EEEEEE;
+    font-weight: 700;
+}
+
+.btnprojeto:hover{
+    transform: scale(1.1);
+}
+
+/* Seção Habilidades */
+#habilidade{
+    text-align: center;
+    margin-top: 150px;
+}
+#habilidade h1{
+    color: rgb(75, 137, 196);
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-shadow: 5px 10px 10px black;
+}
+
+.habilidades{
+    display: flex;
+    gap: 50px; 
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.habilidadescaixa{
+    background-color: #393E46;
+    padding: 30px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    width: 30%;
+    
+    border-top: 5px solid rgb(75, 137, 196);
+    
+
+    margin-bottom: 100px;
+}
+
+.habilidadescaixa h2{
+    color: rgb(75, 137, 196);
+}
+
+.habilidadescaixa p{
+    background-color: #222831;
+    border-radius: 10px;
+    width: 35%;
+    padding: 8px;
+    margin: 10px;
+    transition: 0.3s;
+    box-shadow: 5px 5px 5px black;
+    font-size: 1.0rem;
+}
+
+.habilidadescaixa p:hover{
+    transform: scale(1.1);
+    color: rgb(75, 137, 196);
+}
+.habilidadescaixa h2{
+    text-shadow: 7px 7px 7px black;
+    font-weight: 800;
+}
+
+.habilidadetext{
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    
+}
+
+#contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin-top: 70px;
+    margin-bottom: 100px;
+    
+}
+
+#contato h1{
+    color: rgb(75, 137, 196);
+    font-weight: 800;
+    text-shadow: 5px 10px 10px black;
+    margin-bottom: 50px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.logo img{
+    width: 30px;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #272d36;
+  color: #777;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
