@@ -287,4 +287,97 @@ footer {
   color: #777;
   font-size: 0.9rem;
   margin-top: 40px;
+
+}
+
+/* =========================================
+   VERSÃO MOBILE (CELULARES E TABLETS)
+   ========================================= */
+@media (max-width: 768px) {
+
+   
+    #menu {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    #menu nav a {
+        display: block; 
+        margin: 10px;
+        font-size: 1.1rem;
+    }
+
+    .home {
+        flex-direction: column-reverse; 
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .home div {
+        margin: 20px 0; 
+    }
+
+    .textohome1, .textohome3 {
+        font-size: 2.5rem; 
+    }
+   
+    img {
+        width: 70%;       
+        max-width: 300px; 
+        height: auto;
+    }
+
+    .btn {
+        width: 60%; 
+        margin: 0 auto; 
+    }
+
+    .containersobre {
+        flex-direction: column;
+    }
+    
+    .containersobre div {
+        margin: 20px; 
+    }
+
+    .projetos {
+        width: 90%;    
+        padding: 25px;  
+    }
+
+    .btnprojeto {
+        width: 80%; 
+    }
+
+    .habilidades {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .habilidadescaixa {
+        width: 90%; 
+        margin-bottom: 20px;
+    }
+
+    .habilidadetext {
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    
+    .habilidadescaixa p {
+        width: auto; 
+        min-width: 30%;
+    }
+
+    #sobre, #projeto, #habilidade, #contato {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    
+    #sobre {
+        margin: 40px 20px; 
+    }
 }
