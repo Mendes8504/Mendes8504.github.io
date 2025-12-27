@@ -1,87 +1,100 @@
-*{
+/* =======================================================
+   RESET GLOBAL E CONFIGURAÇÕES BÁSICAS
+   Removemos as margens padrão do navegador para ter controle total.
+   ======================================================= */
+* {
    margin: 0;
    padding: 0;
-   box-sizing: border-box;
-   font-family:Arial, Helvetica, sans-serif;
-   text-decoration: none;
+   box-sizing: border-box; /* Garante que o padding não aumente o tamanho final dos elementos */
+   font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none; /* Remove o sublinhado dos links */
 }
 
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 120px;
+    scroll-behavior: smooth; /* Rolagem suave ao clicar no menu */
+    scroll-padding-top: 120px; /* Compensação para o menu fixo não cobrir o título */
 }
 
 body {
-    font-family:Arial, Helvetica, sans-serif;
-    background-color: #222831;
-    color:#EEEEEE;
+    background-color: #222831; /* Cor de fundo principal (Dark Mode) */
+    color: #EEEEEE; /* Cor do texto principal */
 }
 
-#menu{
+/* =======================================================
+   MENU DE NAVEGAÇÃO (STICKY)
+   Menu que fica fixo no topo ao rolar a página.
+   ======================================================= */
+#menu {
     background-color: #222831;
-    box-shadow:0px 3px 5px black;
-    display: flex;
-    justify-content: space-between;
+    box-shadow: 0px 3px 5px black; /* Sombra suave abaixo do menu */
+    display: flex; /* Flexbox para alinhar itens lado a lado */
+    justify-content: space-between; /* Separa o Logo dos Links */
     padding: 20px 5%;
     font-size: 1.5rem;
     align-items: center;
+    
+    /* Configuração para fixar o menu no topo */
     position: sticky;
     top: 0;
+    z-index: 1000; /* Garante que o menu fique acima de tudo */
     font-weight: 700;
-    z-index: 1000;
 }
 
-#menu nav a{
+#menu nav a {
     font-size: 1.0rem;
     margin: 20px;
     font-weight: 500;
     color: #EEEEEE;
+    transition: 0.4s; /* Suaviza a mudança de cor */
 }
 
-#menu nav a:hover{
-    color: rgb(75, 137, 196);
-    transition: 0.4s;
+#menu nav a:hover {
+    color: rgb(75, 137, 196); /* Azul destaque ao passar o mouse */
 }
 
-/* seção Home */
-.home{
+/* =======================================================
+   SEÇÃO HERO (HOME)
+   A primeira impressão do site.
+   ======================================================= */
+.home {
     padding-top: 50px;
     font-weight: 700;
     display: flex;
-    
-    align-items: center;
+    align-items: center; /* Centraliza verticalmente */
 }
 
 .home div {
     margin: 60px;
 }
 
-.textohome1{
+/* Tipografia da Home */
+.textohome1 {
     font-size: 4.0rem;
     text-shadow: 5px 5px 10px black;
     font-weight: 800;
 }
 
-.textohome3{
+.textohome3 {
     font-size: 4.0rem;
     color: rgb(75, 137, 196);
     font-weight: 800;
     text-shadow: 5px 5px 10px black;
 }
 
-.textohome2{
+.textohome2 {
     margin-top: 10px;
 }
 
-
-img{
+/* Estilo da Foto de Perfil */
+img {
     width: 350px;
-    border-radius: 50%;
+    border-radius: 50%; /* Deixa a imagem redonda */
     box-shadow: 7px 10px 15px black;
     border: 2px solid rgb(75, 137, 196);
 }
 
-.btn{
+/* Botão Principal (Baixar CV) */
+.btn {
     background-color: rgb(34, 63, 90);
     width: 15%;
     padding: 20px;
@@ -89,21 +102,22 @@ img{
     transition: 0.3s;
     text-align: center;
     box-shadow: 5px 5px 10px black;
-    
 }
 
-.btn a{
+.btn a {
     color: #EEEEEE;
     font-weight: 600;
 }
 
-.btn:hover{
-    transform: scale(1.1);
+.btn:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
 }
 
-/*Section Sobre*/
-#sobre{
-    background-color: #393E46;
+/* =======================================================
+   SEÇÃO SOBRE
+   ======================================================= */
+#sobre {
+    background-color: #393E46; /* Tom mais claro para destaque */
     text-align: center;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -111,34 +125,36 @@ img{
     margin: 100px;
 }
 
-#sobre h1{
+#sobre h1 {
     font-size: 2.5rem;
     color: rgb(75, 137, 196);
     font-weight: 800;
     text-shadow: 5px 5px 5px rgb(0, 0, 0);
 }
 
-.containersobre{
-    display: flex; 
+.containersobre {
+    display: flex; /* Blocos lado a lado */
 }
 
-.containersobre h2{
+.containersobre h2 {
     color: rgb(75, 137, 196);
     text-shadow: 5px 5px 5px black;
     font-weight: 800;
 }
 
-.containersobre div{
+.containersobre div {
     margin: 60px;
 }
 
-/*Seção Projetos */
-#projeto{
+/* =======================================================
+   SEÇÃO PROJETOS
+   ======================================================= */
+#projeto {
     text-align: center;
     margin-top: 150px;
 }
 
-#projeto h1{
+#projeto h1 {
     color: rgb(75, 137, 196);
     font-size: 2.5rem;
     font-weight: 800;
@@ -147,29 +163,30 @@ img{
 
 .containerprojetos {
     display: flex;
-    flex-direction: column; /* deixa em coluna */
-    align-items: center;    /* centraliza horizontalmente */
-    gap: 50px;              /* espaço entre os projetos */
+    flex-direction: column; /* Lista os projetos um embaixo do outro */
+    align-items: center;
+    gap: 50px;
     margin-top: 60px;
 }
 
-.projetos{
-    width: 80%;        /* largura controlada */
-    max-width: 900px;  /* não fica gigante em telas grandes */
+.projetos {
+    width: 80%;
+    max-width: 900px; /* Limite de largura para telas muito grandes */
     background-color: #393E46;
     padding: 50px;
     text-align: start;
     border-radius: 20px;
 }
 
-.containerprojetos h2{
-   color: rgb(75, 137, 196);
+.containerprojetos h2 {
+    color: rgb(75, 137, 196);
     font-size: 1.5rem;
     font-weight: 800;
     text-shadow: 5px 5px 5px black;
 }
 
-.btnprojeto{
+/* Botão ver código (GitHub) */
+.btnprojeto {
     background-color: black;
     padding: 12px;
     width: 25%;
@@ -180,52 +197,55 @@ img{
     transition: 0.3s;
 }
 
-.btnprojeto a{
+.btnprojeto a {
     color: #EEEEEE;
     font-weight: 700;
 }
 
-.btnprojeto:hover{
+.btnprojeto:hover {
     transform: scale(1.1);
 }
 
-/* Seção Habilidades */
-#habilidade{
+/* =======================================================
+   SEÇÃO HABILIDADES
+   ======================================================= */
+#habilidade {
     text-align: center;
     margin-top: 150px;
 }
-#habilidade h1{
+
+#habilidade h1 {
     color: rgb(75, 137, 196);
     font-size: 2.5rem;
     font-weight: 800;
     text-shadow: 5px 10px 10px black;
 }
 
-.habilidades{
+.habilidades {
     display: flex;
-    gap: 50px; 
+    gap: 50px;
     justify-content: center;
     margin-top: 70px;
 }
 
-.habilidadescaixa{
+.habilidadescaixa {
     background-color: #393E46;
     padding: 30px;
     padding-bottom: 10px;
     border-radius: 20px;
     width: 30%;
-    
-    border-top: 5px solid rgb(75, 137, 196);
-    
-
+    border-top: 5px solid rgb(75, 137, 196); /* Detalhe colorido no topo */
     margin-bottom: 100px;
 }
 
-.habilidadescaixa h2{
+.habilidadescaixa h2 {
     color: rgb(75, 137, 196);
+    text-shadow: 7px 7px 7px black;
+    font-weight: 800;
 }
 
-.habilidadescaixa p{
+/* Tags de tecnologia */
+.habilidadescaixa p {
     background-color: #222831;
     border-radius: 10px;
     width: 35%;
@@ -236,39 +256,34 @@ img{
     font-size: 1.0rem;
 }
 
-.habilidadescaixa p:hover{
+.habilidadescaixa p:hover {
     transform: scale(1.1);
     color: rgb(75, 137, 196);
 }
-.habilidadescaixa h2{
-    text-shadow: 7px 7px 7px black;
-    font-weight: 800;
-}
 
-.habilidadetext{
+.habilidadetext {
     display: flex;
     margin-top: 30px;
     align-items: center;
-    
 }
 
-#contato{
+/* =======================================================
+   RODAPÉ E CONTATO
+   ======================================================= */
+#contato {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
     margin-top: 70px;
     margin-bottom: 100px;
-    
 }
 
-#contato h1{
+#contato h1 {
     color: rgb(75, 137, 196);
     font-weight: 800;
     text-shadow: 5px 10px 10px black;
     margin-bottom: 50px;
 }
-
 
 .logo {
     display: flex;
@@ -277,25 +292,33 @@ img{
     font-weight: 600;
 }
 
-.logo img{
+.logo img {
     width: 30px;
 }
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #272d36;
-  color: #777;
-  font-size: 0.9rem;
-  margin-top: 40px;
 
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #272d36;
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 40px;
 }
 
-/* =========================================
-   VERSÃO MOBILE (CELULARES E TABLETS)
-   ========================================= */
+/* Regra antiga para telas médias (Mantida para compatibilidade) */
+@media screen and (max-width: 600px) {
+    #menu nav {
+        display: none;
+    }
+}
+
+/* =======================================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   Adaptação para Celulares e Tablets (max-width: 768px)
+   ======================================================= */
 @media (max-width: 768px) {
 
-   
+    /* Ajuste do Menu: Muda de linha para coluna */
     #menu {
         flex-direction: column;
         padding: 15px;
@@ -308,48 +331,57 @@ footer {
         font-size: 1.1rem;
     }
 
+    /* Ajuste da Home: Inverte a ordem (Foto vai para cima) */
     .home {
-        flex-direction: column-reverse; 
+        flex-direction: column-reverse;
         text-align: center;
         padding-top: 20px;
     }
 
     .home div {
-        margin: 20px 0; 
+        margin: 20px 0;
     }
 
+    /* Redução de tipografia para telas pequenas */
     .textohome1, .textohome3 {
         font-size: 2.5rem; 
     }
-   
+
+    /* Imagem responsiva */
     img {
-        width: 70%;       
-        max-width: 300px; 
+        width: 50%;
+        max-width: 300px;
         height: auto;
     }
 
-    .btn {
-        width: 60%; 
-        margin: 0 auto; 
+    /* CORREÇÃO DE BOTÃO (Especificidade CSS)
+       Usamos .home .btn para garantir prioridade sobre regras genéricas */
+    .home .btn {
+        width: 60%;
+        margin: 0 auto; /* Centraliza o bloco */
+        display: block;
     }
 
+    /* Empilha os blocos da seção Sobre */
     .containersobre {
         flex-direction: column;
     }
     
     .containersobre div {
-        margin: 20px; 
+        margin: 20px;
     }
 
+    /* Ajuste da largura dos projetos */
     .projetos {
-        width: 90%;    
-        padding: 25px;  
+        width: 90%;
+        padding: 25px;
     }
 
     .btnprojeto {
-        width: 80%; 
+        width: 80%; /* Botão maior para facilitar o toque (touch) */
     }
 
+    /* Empilha as caixas de habilidade */
     .habilidades {
         flex-direction: column;
         align-items: center;
@@ -358,26 +390,28 @@ footer {
     }
 
     .habilidadescaixa {
-        width: 90%; 
+        width: 90%;
         margin-bottom: 20px;
     }
 
+    /* Permite que as tags de habilidade quebrem linha */
     .habilidadetext {
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         justify-content: center;
     }
     
     .habilidadescaixa p {
-        width: auto; 
+        width: auto;
         min-width: 30%;
     }
 
+    /* Ajuste de margens finais */
     #sobre, #projeto, #habilidade, #contato {
         margin-top: 60px;
         margin-bottom: 60px;
     }
     
     #sobre {
-        margin: 40px 20px; 
+        margin: 40px 20px;
     }
 }
