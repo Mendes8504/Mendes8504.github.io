@@ -3,21 +3,31 @@
    Removemos as margens padrão do navegador para ter controle total.
    ======================================================= */
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box; /* Garante que o padding não aumente o tamanho final dos elementos */
-   font-family: Arial, Helvetica, sans-serif;
-   text-decoration: none; /* Remove o sublinhado dos links */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Garante que o padding não aumente o tamanho final dos elementos */
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    /* Remove o sublinhado dos links */
 }
 
 html {
-    scroll-behavior: smooth; /* Rolagem suave ao clicar no menu */
-    scroll-padding-top: 120px; /* Compensação para o menu fixo não cobrir o título */
+    scroll-behavior: smooth;
+    /* Rolagem suave ao clicar no menu */
+    scroll-padding-top: 120px;
+    /* Compensação para o menu fixo não cobrir o título */
 }
 
 body {
-    background-color: #222831; /* Cor de fundo principal (Dark Mode) */
-    color: #EEEEEE; /* Cor do texto principal */
+    background-color: #222831;
+    /* Cor de fundo principal (Dark Mode) */
+    color: #EEEEEE;
+    /* Cor do texto principal */
+}
+
+a {
+    color: #EEEEEE;
 }
 
 /* =======================================================
@@ -26,17 +36,21 @@ body {
    ======================================================= */
 #menu {
     background-color: #222831;
-    box-shadow: 0px 3px 5px black; /* Sombra suave abaixo do menu */
-    display: flex; /* Flexbox para alinhar itens lado a lado */
-    justify-content: space-between; /* Separa o Logo dos Links */
+    box-shadow: 0px 3px 5px black;
+    /* Sombra suave abaixo do menu */
+    display: flex;
+    /* Flexbox para alinhar itens lado a lado */
+    justify-content: space-between;
+    /* Separa o Logo dos Links */
     padding: 20px 5%;
     font-size: 1.5rem;
     align-items: center;
-    
+
     /* Configuração para fixar o menu no topo */
     position: sticky;
     top: 0;
-    z-index: 1000; /* Garante que o menu fique acima de tudo */
+    z-index: 1000;
+    /* Garante que o menu fique acima de tudo */
     font-weight: 700;
 }
 
@@ -44,12 +58,13 @@ body {
     font-size: 1.0rem;
     margin: 20px;
     font-weight: 500;
-    color: #EEEEEE;
-    transition: 0.4s; /* Suaviza a mudança de cor */
+    transition: 0.4s;
+    /* Suaviza a mudança de cor */
 }
 
 #menu nav a:hover {
-    color: rgb(75, 137, 196); /* Azul destaque ao passar o mouse */
+    color: rgb(75, 137, 196);
+    /* Azul destaque ao passar o mouse */
 }
 
 /* =======================================================
@@ -60,7 +75,8 @@ body {
     padding-top: 50px;
     font-weight: 700;
     display: flex;
-    align-items: center; /* Centraliza verticalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
 }
 
 .home div {
@@ -88,36 +104,35 @@ body {
 /* Estilo da Foto de Perfil */
 img {
     width: 350px;
-    border-radius: 50%; /* Deixa a imagem redonda */
+    border-radius: 50%;
+    /* Deixa a imagem redonda */
     box-shadow: 7px 10px 15px black;
     border: 2px solid rgb(75, 137, 196);
 }
 
 /* Botão Principal (Baixar CV) */
-.btn {
-    background-color: rgb(34, 63, 90);
-    width: 15%;
-    padding: 20px;
-    border-radius: 5%;
-    transition: 0.3s;
+
+.btn a:link {
+    background-color: rgb(35, 75, 112);
+    padding: 15px;
     text-align: center;
-    box-shadow: 5px 5px 10px black;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 5px 5px 5px black;
+    transition: 0.3s;
 }
 
-.btn a {
-    color: #EEEEEE;
-    font-weight: 600;
-}
-
-.btn:hover {
-    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+.btn a:hover {
+    transform: scale(1.1);
+    background-color: black;
 }
 
 /* =======================================================
    SEÇÃO SOBRE
    ======================================================= */
 #sobre {
-    background-color: #393E46; /* Tom mais claro para destaque */
+    background-color: #393E46;
+    /* Tom mais claro para destaque */
     text-align: center;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -133,7 +148,8 @@ img {
 }
 
 .containersobre {
-    display: flex; /* Blocos lado a lado */
+    display: flex;
+    /* Blocos lado a lado */
 }
 
 .containersobre h2 {
@@ -163,7 +179,8 @@ img {
 
 .containerprojetos {
     display: flex;
-    flex-direction: column; /* Lista os projetos um embaixo do outro */
+    flex-direction: column;
+    /* Lista os projetos um embaixo do outro */
     align-items: center;
     gap: 50px;
     margin-top: 60px;
@@ -171,7 +188,8 @@ img {
 
 .projetos {
     width: 80%;
-    max-width: 900px; /* Limite de largura para telas muito grandes */
+    max-width: 900px;
+    /* Limite de largura para telas muito grandes */
     background-color: #393E46;
     padding: 50px;
     text-align: start;
@@ -187,23 +205,22 @@ img {
 
 /* Botão ver código (GitHub) */
 .btnprojeto {
-    background-color: black;
-    padding: 12px;
-    width: 25%;
-    margin-top: 2%;
+    margin-top: 20px;
+}
+
+.btnprojeto a:link {
+    background-color: rgb(43, 87, 128);
+    padding: 13px;
+    border-radius: 10px;
     text-align: center;
-    border-radius: 5px;
+    display: inline-block;
     box-shadow: 2px 3px 5px black;
     transition: 0.3s;
 }
 
-.btnprojeto a {
-    color: #EEEEEE;
-    font-weight: 700;
-}
-
-.btnprojeto:hover {
+.btnprojeto a:hover {
     transform: scale(1.1);
+    background-color: rgb(0, 0, 0);
 }
 
 /* =======================================================
@@ -234,7 +251,8 @@ img {
     padding-bottom: 10px;
     border-radius: 20px;
     width: 30%;
-    border-top: 5px solid rgb(75, 137, 196); /* Detalhe colorido no topo */
+    border-top: 5px solid rgb(75, 137, 196);
+    /* Detalhe colorido no topo */
     margin-bottom: 100px;
 }
 
@@ -324,9 +342,9 @@ footer {
         padding: 15px;
         gap: 15px;
     }
-    
+
     #menu nav a {
-        display: block; 
+        display: block;
         margin: 10px;
         font-size: 1.1rem;
     }
@@ -343,8 +361,9 @@ footer {
     }
 
     /* Redução de tipografia para telas pequenas */
-    .textohome1, .textohome3 {
-        font-size: 2.5rem; 
+    .textohome1,
+    .textohome3 {
+        font-size: 2.5rem;
     }
 
     /* Imagem responsiva */
@@ -358,7 +377,8 @@ footer {
        Usamos .home .btn para garantir prioridade sobre regras genéricas */
     .home .btn {
         width: 60%;
-        margin: 0 auto; /* Centraliza o bloco */
+        margin: 0 auto;
+        /* Centraliza o bloco */
         display: block;
     }
 
@@ -366,7 +386,7 @@ footer {
     .containersobre {
         flex-direction: column;
     }
-    
+
     .containersobre div {
         margin: 20px;
     }
@@ -378,7 +398,8 @@ footer {
     }
 
     .btnprojeto {
-        width: 80%; /* Botão maior para facilitar o toque (touch) */
+        width: 80%;
+        /* Botão maior para facilitar o toque (touch) */
     }
 
     /* Empilha as caixas de habilidade */
@@ -399,18 +420,21 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     .habilidadescaixa p {
         width: auto;
         min-width: 30%;
     }
 
     /* Ajuste de margens finais */
-    #sobre, #projeto, #habilidade, #contato {
+    #sobre,
+    #projeto,
+    #habilidade,
+    #contato {
         margin-top: 60px;
         margin-bottom: 60px;
     }
-    
+
     #sobre {
         margin: 40px 20px;
     }
