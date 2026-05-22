@@ -1,264 +1,444 @@
 <!DOCTYPE html>
-<!-- Documento HTML5 -->
 <html lang="pt-BR">
 
 <head>
-    <!-- Define o padrão de caracteres (acentos) -->
     <meta charset="UTF-8">
-
-    <!-- Responsividade para diferentes tamanhos de tela -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Importação do arquivo CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Devicons para ícones de tecnologia -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Google Fonts: Syne (display) + DM Sans (corpo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W1J10GXGBV"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-W1J10GXGBV');
     </script>
 
-    <!-- Título da aba do navegador -->
-    <title>Gabriel Mendes</title>
+    <title>Gabriel Mendes — Dev Full Stack</title>
 </head>
 
 <body>
-    <!-- Menu de navegação do site -->
-    <section id="menu">
-        <p class="nome">Gabriel Mendes</p>
 
-        <!-- Links que levam para seções da própria página -->
+    <!-- ======== MENU ======== -->
+    <header id="menu">
+        <p class="nome">Gabriel<span class="nome-destaque">.</span></p>
         <nav>
-            <a href="#sobre">Minha Proposta</a>
+            <a href="#sobre">Proposta</a>
             <a href="#projeto">Projetos</a>
             <a href="#habilidade">Habilidades</a>
             <a href="#contato">Contato</a>
         </nav>
-    </section>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
 
-    <!-- Seção inicial / apresentação -->
+    <!-- Menu mobile overlay -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#sobre" class="mobile-link">Proposta</a>
+        <a href="#projeto" class="mobile-link">Projetos</a>
+        <a href="#habilidade" class="mobile-link">Habilidades</a>
+        <a href="#contato" class="mobile-link">Contato</a>
+    </div>
+
+    <!-- ======== HERO ======== -->
     <section id="home">
-        <div class="home">
-            <div class="inicio">
-                <div>
-                    <!-- Frases de destaque -->
-                    <p class="textohome1">Iniciante no Código,</p>
-                    <p class="textohome3">Focado em Soluções.</p>
-
-                    <!-- Texto de apresentação profissional -->
-                    <p class="textohome2">
-                        Sou Gabriel Mendes, estudante de Análise e Desenvolvimento de Sistemas.
-                        Tenho perfil Full Stack, atuando no Front-end com <strong>JavaScript, HTML e CSS</strong> e no
-                        Back-end com
-                        <strong>PHP, C# e Python</strong>. Possuo também domínio em banco de dados
-                        <strong>PostgreSQL</strong>.
-                    </p>
-                </div>
-
-                <!-- Botão para baixar o currículo -->
-                <div class="btn">
-                    <a href="Curriculo-Gabriel.pdf" download>Baixar CV</a>
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="hero-texto reveal">
+                <span class="hero-tag">Estudante de ADS · Full Stack</span>
+                <h1 class="hero-nome">Gabriel<br><span class="hero-nome-azul">Mendes</span></h1>
+                <p class="hero-digitando"><span class="digitando"></span></p>
+                <p class="hero-desc">
+                    Desenvolvedor com perfil Full Stack: front com <strong>JavaScript, HTML e CSS</strong>,
+                    back com <strong>PHP, C, C# e Python</strong>, e banco de dados <strong>PostgreSQL</strong>.
+                    Buscando meu primeiro estágio para transformar código em soluções reais.
+                </p>
+                <div class="hero-btns">
+                    <a href="Gabriel_Mendes_Lima_Currículo.pdf" download class="btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Baixar CV
+                    </a>
+                    <a href="#contato" class="btn-secondary">Entrar em contato</a>
                 </div>
             </div>
+            <div class="hero-foto reveal reveal-delay">
+                <div class="foto-wrapper">
+                    <img src="foto_perfil.jpeg" alt="Foto de Gabriel Mendes">
+                    <div class="foto-badge">
+                        <span class="badge-dot"></span>
+                        Disponível para estágio
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <!-- Imagem de perfil -->
-            <div>
-                <img src="foto-perfil.png" alt="Foto">
+        <!-- Stats rápidas -->
+        <div class="hero-stats reveal">
+            <div class="stat-item">
+                <span class="stat-num">5+</span>
+                <span class="stat-label">Projetos</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+                <span class="stat-num">6+</span>
+                <span class="stat-label">Linguagens</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+                <span class="stat-num">ADS</span>
+                <span class="stat-label">Cursando</span>
             </div>
         </div>
     </section>
 
-    <!-- Seção explicando o diferencial profissional -->
+    <!-- ======== SOBRE ======== -->
     <section id="sobre">
-        <h1>Por que me Contratar?</h1>
+        <div class="section-header reveal">
+            <span class="section-tag">Por que me contratar?</span>
+            <h2 class="section-titulo">Minha Proposta de Valor</h2>
+        </div>
 
-        <!-- Blocos de texto organizados -->
         <div class="containersobre">
-            <div>
-                <h2>Adaptabilidade Técnica</h2> <br>
-                <p>
-                    Facilidade para transitar entre diferentes tecnologias. Com base sólida em lógica,
-                    aplico conhecimentos de Python, C# e Web para resolver problemas, independentemente da ferramenta.
-                </p>
+            <div class="sobre-card reveal">
+                <div class="sobre-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <h3>Adaptabilidade Técnica</h3>
+                <p>Facilidade para transitar entre diferentes tecnologias. Com base sólida em lógica, aplico conhecimentos de Python, C# e Web para resolver problemas, independentemente da ferramenta.</p>
             </div>
-            <div>
-                <h2>Desenvolvimento Autoral</h2> <br>
-                <p>
-                    Meus projetos vão além do código: são soluções funcionais. Desenvolvo aplicações completas
-                    (Front, Back e Banco de Dados) focadas em resolver dores reais, sem apenas replicar tutoriais.
-                </p>
+            <div class="sobre-card reveal reveal-delay">
+                <div class="sobre-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3>Desenvolvimento Autoral</h3>
+                <p>Meus projetos vão além do código: são soluções funcionais. Desenvolvo aplicações completas — Front, Back e Banco de Dados — focadas em resolver problemas reais, sem apenas replicar tutoriais.</p>
             </div>
-            <div>
-                <h2>Mentalidade de Crescimento</h2> <br>
-                <p>
-                    Como estudante de Análise e Desenvolvimento de Sistemas, uno a teoria acadêmica à prática.
-                    Busco integrar equipes onde eu possa somar com minha proatividade e dedicação integral.
-                </p>
+            <div class="sobre-card reveal reveal-delay-2">
+                <div class="sobre-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+                </div>
+                <h3>Mentalidade de Crescimento</h3>
+                <p>Como estudante de ADS, uno a teoria acadêmica à prática. Busco integrar equipes onde eu possa somar com minha proatividade, aprendizado rápido e dedicação integral.</p>
             </div>
         </div>
     </section>
 
-    <!-- Seção de projetos -->
+    <!-- ======== PROJETOS ======== -->
     <section id="projeto">
-        <h1>Meus Projetos</h1>
+        <div class="section-header reveal">
+            <span class="section-tag">Portfólio</span>
+            <h2 class="section-titulo">Meus Projetos</h2>
+        </div>
 
-        <!-- Container geral dos projetos -->
         <div class="containerprojetos">
 
-            <!-- Projeto individual -->
-            <div class="projetos">
-                <h2>Projeto 1: Sistema de Controle de Estoque (CRUD em C)</h2>
-                <br>
-                <p><strong>Stack:</strong> Linguagem C, File Handling (Arquivos), Structs, Ponteiros, Lógica de
-                    Algoritmos</p>
-                <br>
-                <p><strong>Análise:</strong> Desenvolvimento de um sistema completo de gestão via linha de comando
-                    (CLI). O foco principal foi a implementação de persistência de dados em arquivos de texto (.txt) e a
-                    lógica de identificadores únicos (auto-incremento). O projeto abrange operações de CRUD, busca
-                    linear, tratamento de memória e exibição tabular formatada.</p>
-
-                <!-- Botão para acessar o código no GitHub -->
-                <div class="btnprojeto">
-                    <a href="https://github.com/Mendes8504/sistema-gestao-estoque-c" target="_blank"> Ver Código
-                        (GitHub)</a>
+            <div class="projeto-card destaque reveal">
+                <div class="projeto-header">
+                    <div class="projeto-lang">
+                        <i class="devicon-c-plain"></i> C
+                    </div>
+                    <span class="projeto-badge">Projeto em Destaque</span>
                 </div>
+                <h3>Sistema de Controle de Estoque</h3>
+                <p class="projeto-desc">Sistema completo de gestão via linha de comando (CLI) com persistência de dados em arquivos .txt e lógica de auto-incremento de IDs. Abrange CRUD completo, busca linear, gerenciamento de memória e exibição tabular formatada.</p>
+                <div class="projeto-stack">
+                    <span>Linguagem C</span>
+                    <span>File Handling</span>
+                    <span>Structs</span>
+                    <span>Ponteiros</span>
+                    <span>CRUD</span>
+                </div>
+                <a href="https://github.com/Mendes8504/sistema-gestao-estoque-c" target="_blank" class="btn-projeto">
+                    Ver no GitHub
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
             </div>
 
-            <div class="projetos">
-                <h2>Projeto 2: Batalha Naval (Lógica em C)</h2>
-                <br>
-                <p><strong>Stack:</strong> Linguagem C, Estrutura de Dados (Matrizes), Lógica Algorítmica</p>
-                <br>
-                <p><strong>Análise:</strong> Este projeto foca na manipulação avançada de matrizes bidimensionais. O
-                    principal desafio foi criar a lógica de coordenadas cartesianas e usar laços de repetição aninhados
-                    para renderizar o tabuleiro e posicionar os navios estrategicamente na memória.</p>
-
-                <div class="btnprojeto">
-                    <a href="https://github.com/Mendes8504/jogo-batalha-naval" target="_blank">Ver Código (GitHub)</a>
+            <div class="projeto-card reveal">
+                <div class="projeto-header">
+                    <div class="projeto-lang">
+                        <i class="devicon-c-plain"></i> C
+                    </div>
                 </div>
+                <h3>Batalha Naval</h3>
+                <p class="projeto-desc">Jogo completo com foco em manipulação avançada de matrizes bidimensionais. O principal desafio foi criar a lógica de coordenadas cartesianas e usar loops aninhados para renderizar o tabuleiro e posicionar navios estrategicamente na memória.</p>
+                <div class="projeto-stack">
+                    <span>Linguagem C</span>
+                    <span>Matrizes 2D</span>
+                    <span>Lógica Algorítmica</span>
+                </div>
+                <a href="https://github.com/Mendes8504/jogo-batalha-naval" target="_blank" class="btn-projeto">
+                    Ver no GitHub
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
             </div>
 
-            <div class="projetos">
-                <h2>Projeto 3: Sistema War (Estrutura de Dados em C)</h2>
-                <br>
-                <p><strong>Stack:</strong> Linguagem C, Structs, Arrays, Gestão de Memória</p>
-                <br>
-                <p><strong>Análise:</strong> Este projeto foca na modelagem de dados complexos. O principal desafio foi
-                    utilizar Structs para gerenciar o estado dos territórios e implementar validações robustas de
-                    entrada (limpeza de buffer), garantindo a estabilidade da execução e a integridade dos dados na
-                    memória.</p>
-                <div class="btnprojeto">
-                    <a href="https://github.com/Mendes8504/sistema-war-c" target="_blank"> Ver Código (GitHub)</a>
+            <div class="projeto-card reveal">
+                <div class="projeto-header">
+                    <div class="projeto-lang">
+                        <i class="devicon-c-plain"></i> C
+                    </div>
                 </div>
+                <h3>Sistema War</h3>
+                <p class="projeto-desc">Modelagem de dados complexos usando Structs para gerenciar estado de territórios. Implementei validações robustas de entrada com limpeza de buffer, garantindo estabilidade de execução e integridade dos dados na memória.</p>
+                <div class="projeto-stack">
+                    <span>Linguagem C</span>
+                    <span>Structs</span>
+                    <span>Arrays</span>
+                    <span>Gestão de Memória</span>
+                </div>
+                <a href="https://github.com/Mendes8504/sistema-war-c" target="_blank" class="btn-projeto">
+                    Ver no GitHub
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
             </div>
 
-            <div class="projetos">
-                <h2>Projeto 4: Super Trunfo (Lógica Fundamental)</h2>
-                <br>
-                <p><strong>Stack:</strong> Linguagem C, Tipos Primitivos, Switch/Case</p>
-                <br>
-                <p><strong>Análise:</strong> Jogo de cartas focado em fundamentos de programação.</p>
-                <div class="btnprojeto">
-                    <a href="https://github.com/Mendes8504/super-trunfo-c" target="_blank"> Ver Código (GitHub)</a>
+            <div class="projeto-card reveal">
+                <div class="projeto-header">
+                    <div class="projeto-lang">
+                        <i class="devicon-c-plain"></i> C
+                    </div>
                 </div>
+                <h3>Super Trunfo</h3>
+                <p class="projeto-desc">Implementação do clássico jogo de cartas com foco em fundamentos sólidos de programação. Utiliza tipos primitivos e estrutura Switch/Case para comparar atributos e determinar o vencedor de cada rodada.</p>
+                <div class="projeto-stack">
+                    <span>Linguagem C</span>
+                    <span>Tipos Primitivos</span>
+                    <span>Switch/Case</span>
+                </div>
+                <a href="https://github.com/Mendes8504/super-trunfo-c" target="_blank" class="btn-projeto">
+                    Ver no GitHub
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
             </div>
 
-            <div class="projetos">
-                <h2>Projeto 5: Xadrez (Algoritmos Recursivos)</h2>
-                <br>
-                <p><strong>Stack:</strong> Linguagem C, Recursividade, Loops Aninhados</p>
-                <br>
-                <p><strong>Análise:</strong> Simulação de movimentos de peças de xadrez focado em algoritmos.</p>
-                <div class="btnprojeto">
-                    <a href="https://github.com/Mendes8504/xadrez-recursivo-c" target="_blank"> Ver Código (GitHub)</a>
+            <div class="projeto-card reveal">
+                <div class="projeto-header">
+                    <div class="projeto-lang">
+                        <i class="devicon-c-plain"></i> C
+                    </div>
                 </div>
+                <h3>Xadrez Recursivo</h3>
+                <p class="projeto-desc">Simulação de movimentos de peças de xadrez explorando algoritmos recursivos. O desafio central foi modelar o comportamento de cada peça (cavalo, bispo, torre) com funções que se chamam recursivamente para calcular as casas alcançáveis.</p>
+                <div class="projeto-stack">
+                    <span>Linguagem C</span>
+                    <span>Recursividade</span>
+                    <span>Loops Aninhados</span>
+                </div>
+                <a href="https://github.com/Mendes8504/xadrez-recursivo-c" target="_blank" class="btn-projeto">
+                    Ver no GitHub
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+            </div>
+
+            <!-- Portfólio como projeto web -->
+            <div class="projeto-card reveal">
+                <div class="projeto-header">
+                    <div class="projeto-lang" style="gap:6px">
+                        <i class="devicon-html5-plain" style="color:#e44d26"></i>
+                        <i class="devicon-css3-plain" style="color:#264de4"></i>
+                        <i class="devicon-javascript-plain" style="color:#f0db4f"></i>
+                    </div>
+                </div>
+                <h3>Este Portfólio</h3>
+                <p class="projeto-desc">Site pessoal desenvolvido do zero com HTML5, CSS3 e JavaScript puro. Sem frameworks. Foco em responsividade, efeito de digitação animado, scroll reveal e boas práticas de semântica e acessibilidade.</p>
+                <div class="projeto-stack">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Responsivo</span>
+                </div>
+                <a href="https://github.com/Mendes8504/mendes8504.github.io" target="_blank" class="btn-projeto">
+                    Ver no GitHub
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
             </div>
 
         </div>
     </section>
 
-    <!-- Seção de habilidades -->
+    <!-- ======== HABILIDADES ======== -->
     <section id="habilidade">
-        <h1>Minhas Habilidades e Conhecimentos</h1>
+        <div class="section-header reveal">
+            <span class="section-tag">Stack</span>
+            <h2 class="section-titulo">Habilidades e Conhecimentos</h2>
+        </div>
 
-        <!-- Organização das habilidades por área -->
-        <div class="habilidades">
-            <div class="habilidadescaixa">
-                <h2>Front-end</h2>
-                <div class="habilidadetext">
-                    <br>
-                    <p>HTML5</p>
-                    <p>CSS3</p>
-                    <p>JavaScript</p>
+        <div class="habilidades-grid">
+
+            <div class="habilidade-grupo reveal">
+                <h3 class="grupo-titulo">Front-end</h3>
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <i class="devicon-html5-plain colored"></i>
+                        <div class="skill-info">
+                            <span class="skill-nome">HTML5</span>
+                            <div class="skill-bar"><div class="skill-fill" style="--w: 85%"></div></div>
+                        </div>
+                        <span class="skill-nivel intermediario">Intermediário</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-css3-plain colored"></i>
+                        <div class="skill-info">
+                            <span class="skill-nome">CSS3</span>
+                            <div class="skill-bar"><div class="skill-fill" style="--w: 80%"></div></div>
+                        </div>
+                        <span class="skill-nivel intermediario">Intermediário</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <div class="skill-info">
+                            <span class="skill-nome">JavaScript</span>
+                            <div class="skill-bar"><div class="skill-fill" style="--w: 70%"></div></div>
+                        </div>
+                        <span class="skill-nivel intermediario">Intermediário</span>
+                    </div>
                 </div>
             </div>
-            <div class="habilidadescaixa">
-                <h2>Back-end</h2>
-                <div class="habilidadetext">
-                    <br>
-                    <p>PHP</p>
-                    <p>Python</p>
-                    <p>C</p>
-                    <p>Java</p>
+
+            <div class="habilidade-grupo reveal reveal-delay">
+                <h3 class="grupo-titulo">Back-end</h3>
+                <div class="skills-list">
+                    
+                    <div class="skill-item">
+                        <i class="devicon-python-plain colored"></i>
+                        <div class="skill-info">
+                            <span class="skill-nome">Python</span>
+                            <div class="skill-bar"><div class="skill-fill" style="--w: 60%"></div></div>
+                        </div>
+                        <span class="skill-nivel basico">Básico</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-php-plain colored"></i>
+                        <div class="skill-info">
+                            <span class="skill-nome">PHP</span>
+                            <div class="skill-bar"><div class="skill-fill" style="--w: 55%"></div></div>
+                        </div>
+                        <span class="skill-nivel basico">Básico</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-csharp-plain colored"></i>
+                        <div class="skill-info">
+                            <span class="skill-nome">C#</span>
+                            <div class="skill-bar"><div class="skill-fill" style="--w: 50%"></div></div>
+                        </div>
+                        <span class="skill-nivel basico">Básico</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-java-plain colored"></i>
+                        <div class="skill-info">
+                            <span class="skill-nome">Java</span>
+                            <div class="skill-bar"><div class="skill-fill" style="--w: 45%"></div></div>
+                        </div>
+                        <span class="skill-nivel basico">Básico</span>
+                    </div>
                 </div>
             </div>
-            <div class="habilidadescaixa">
-                <h2>Banco de Dados</h2>
-                <div class="habilidadetext">
-                    <br>
-                    <p>PostgreSQL</p>
+
+            <div class="habilidade-grupo reveal reveal-delay-2">
+                <h3 class="grupo-titulo">Banco de Dados &amp; Ferramentas</h3>
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <i class="devicon-postgresql-plain colored"></i>
+                        <div class="skill-info">
+                            <span class="skill-nome">PostgreSQL</span>
+                            <div class="skill-bar"><div class="skill-fill" style="--w: 65%"></div></div>
+                        </div>
+                        <span class="skill-nivel intermediario">Intermediário</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-git-plain colored"></i>
+                        <div class="skill-info">
+                            <span class="skill-nome">Git &amp; GitHub</span>
+                            <div class="skill-bar"><div class="skill-fill" style="--w: 70%"></div></div>
+                        </div>
+                        <span class="skill-nivel intermediario">Intermediário</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-vscode-plain colored"></i>
+                        <div class="skill-info">
+                            <span class="skill-nome">VS Code</span>
+                            <div class="skill-bar"><div class="skill-fill" style="--w: 85%"></div></div>
+                        </div>
+                        <span class="skill-nivel intermediario">Intermediário</span>
+                    </div>
                 </div>
+
             </div>
+
         </div>
     </section>
 
-    <!-- Seção de contato -->
+    <!-- ======== CONTATO ======== -->
     <section id="contato">
-        <h1>Contato</h1>
-
-        <!-- Cada bloco representa uma forma de contato -->
-        <div class="logo">
-            <img src="github.png" alt="Logo GitHub">
-            <a href="https://github.com/Mendes8504" target="_blank">
-                <p>GitHub</p>
-            </a>
+        <div class="section-header reveal">
+            <span class="section-tag">Vamos conversar?</span>
+            <h2 class="section-titulo">Entre em Contato</h2>
+            <p class="contato-subtitulo">Estou buscando minha primeira oportunidade de estágio. Se você tem uma vaga ou quer trocar uma ideia, me chama!</p>
         </div>
 
-        <div class="logo">
-            <img src="linkedin.png" alt="Logo linkedin">
-            <a href="https://www.linkedin.com/in/gabriel-mendes-800a69293?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B5fGo1mo4QrCDFyeegHATqg%3D%3D"
-                target="_blank">
-                <p>LinkedIn</p>
+        <div class="contato-grid">
+            <a href="https://github.com/Mendes8504" target="_blank" class="contato-card reveal">
+                <div class="contato-icon">
+                    <i class="devicon-github-original"></i>
+                </div>
+                <div class="contato-info">
+                    <span class="contato-plataforma">GitHub</span>
+                    <span class="contato-valor">Mendes8504</span>
+                </div>
+                <svg class="contato-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
-        </div>
 
-        <div class="logo">
-            <img src="whatsapp.png" alt="Logo Whatsapp">
-            <a href="https://wa.me/5511986772514" target="_blank">
-                <p>(11) 98677-2514</p>
+            <a href="https://www.linkedin.com/in/gabriel-mendes-800a69293" target="_blank" class="contato-card reveal reveal-delay">
+                <div class="contato-icon linkedin">
+                    <i class="devicon-linkedin-plain"></i>
+                </div>
+                <div class="contato-info">
+                    <span class="contato-plataforma">LinkedIn</span>
+                    <span class="contato-valor">Gabriel Mendes</span>
+                </div>
+                <svg class="contato-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
-        </div>
 
-        <div class="logo">
-            <img src="e-mail.png" alt="Logo E-mail">
-            <a href="mailto:mendess.8677@gmail.com?subject=Contato via portfólio">
-                <p>mendess.8677@gmail.com</p>
+            <a href="https://wa.me/5511986772514" target="_blank" class="contato-card reveal reveal-delay-2">
+                <div class="contato-icon whatsapp">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </div>
+                <div class="contato-info">
+                    <span class="contato-plataforma">WhatsApp</span>
+                    <span class="contato-valor">(11) 98677-2514</span>
+                </div>
+                <svg class="contato-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+
+            <a href="mailto:mendess.8677@gmail.com?subject=Contato via portfólio" class="contato-card reveal reveal-delay">
+                <div class="contato-icon email">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="contato-info">
+                    <span class="contato-plataforma">E-mail</span>
+                    <span class="contato-valor">mendess.8677@gmail.com</span>
+                </div>
+                <svg class="contato-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
         </div>
     </section>
 
-    <!-- Rodapé do site -->
+    <!-- ======== FOOTER ======== -->
     <footer>
-        <p>© 2025 Gabriel Mendes. Todos os direitos reservados.</p>
+        <p>© 2025 Gabriel Mendes — Feito com HTML, CSS e JS puro.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
-
-
-
-
